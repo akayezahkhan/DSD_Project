@@ -1,0 +1,5 @@
+verilog isim_temp "mac.v"
+verilog isim_temp "mac_datapath.v"
+verilog isim_temp "mac_controller.v"
+verilog isim_temp "mac_testbech.v"
+verilog isim_temp "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v"

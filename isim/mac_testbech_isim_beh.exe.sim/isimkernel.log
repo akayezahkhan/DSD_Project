@@ -1,0 +1,28 @@
+Command line:
+   mac_testbech_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58721
+
+Fri Dec 06 17:18:24 2024
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5160.21 Meg
+
+ Total Signals          : 145
+ Total Nets             : 6773
+ Total Signal Drivers   : 335
+ Total Blocks           : 5
+ Total Primitive Blocks : 2
+ Total Processes        : 351
+ Total Traceable Variables  : 254
+ Total Scalar Nets and Variables : 20483
+
+ Total Simulation Time: 0.140625 sec
+
+ Current Memory Usage: 5002.93 Meg
+
+Fri Dec 06 17:24:00 2024
+

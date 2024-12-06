@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project/mac_controller.xst" -ofn "C:/Windows/System32/DSD_Project/mac_controller.syr" 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project/mac_controller.xst" -ofn "C:/Windows/System32/DSD_Project/mac_controller.syr" 

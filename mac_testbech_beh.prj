@@ -1,0 +1,5 @@
+verilog work "mac.v"
+verilog work "mac_datapath.v"
+verilog work "mac_controller.v"
+verilog work "mac_testbech.v"
+verilog work "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v"

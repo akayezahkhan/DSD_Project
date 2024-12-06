@@ -1,0 +1,3 @@
+verilog work "mac.v"
+verilog work "mac_datapath.v"
+verilog work "mac_controller.v"
