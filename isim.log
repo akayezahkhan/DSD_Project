@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Windows\System32\DSD_Project\mac_testbech_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Windows/system32/DSD_Project/mac_testbech_isim_beh.wdb 
+Running: C:\Windows\System32\DSD_Project_Testing\top_module_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Windows/system32/DSD_Project_Testing/top_module_tb_isim_beh.wdb 
 ISim P.58f (signature 0x7708f090)
 This is a Full version of ISim.
 Time resolution is 1 ps
@@ -8,6 +8,15 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 1.00us
-# run 1.00us
+Matrix Multiplication Completed. Results:
+Result[0] = 1
+Result[1] = 1
+Result[2] = 1
+Result[3] = 1
+Result[4] = 0
+Result[5] = 1
+Result[6] = 1
+Result[7] = 0
+Result[8] = 0
+Stopped at time : 155 ns : File "C:/Windows/System32/DSD_Project_Testing/top_module_tb.v" Line 83
 # run 1.00us

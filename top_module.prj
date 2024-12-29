@@ -1,0 +1,3 @@
+verilog work "mac.v"
+verilog work "controller.v"
+verilog work "top_module.v"

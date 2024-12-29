@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Windows\system32\DSD_Project_Testing\impact.xsl
+OUTFILE=C:\Windows\system32\DSD_Project_Testing\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=C:\Windows\system32\DSD_Project_Testing
+LICENSE=iMPACT
+USER_INFO=iMPACT

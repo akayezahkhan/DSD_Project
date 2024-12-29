@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/datapath.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/datapath.syr" 

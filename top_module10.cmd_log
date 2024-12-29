@@ -1,0 +1,23 @@
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/top_module10.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/top_module10.syr" 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/top_module10.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/top_module10.syr" 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/top_module10.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/top_module10.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim top_module10.ngc top_module10_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 top_module10.ngc top_module10.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_module10_map.ncd top_module10.ngd top_module10.pcf 
+par -w -intstyle ise -ol high -mt off top_module10_map.ncd top_module10.ncd top_module10.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_module10.twx top_module10.ncd -o top_module10.twr top_module10.pcf 
+bitgen -intstyle ise -f top_module10.ut top_module10.ncd 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/top_module10.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/top_module10.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim top_module10.ngc top_module10_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 top_module10.ngc top_module10.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_module10_map.ncd top_module10.ngd top_module10.pcf 
+par -w -intstyle ise -ol high -mt off top_module10_map.ncd top_module10.ncd top_module10.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_module10.twx top_module10.ncd -o top_module10.twr top_module10.pcf 
+bitgen -intstyle ise -f top_module10.ut top_module10.ncd 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/top_module10.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/top_module10.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim top_module10.ngc top_module10_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 top_module10.ngc top_module10.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_module10_map.ncd top_module10.ngd top_module10.pcf 
+par -w -intstyle ise -ol high -mt off top_module10_map.ncd top_module10.ncd top_module10.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_module10.twx top_module10.ncd -o top_module10.twr top_module10.pcf 
+bitgen -intstyle ise -f top_module10.ut top_module10.ncd 

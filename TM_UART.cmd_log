@@ -1,0 +1,55 @@
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim TM_UART.ngc TM_UART_synthesis.v 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim TM_UART.ngc TM_UART_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UART.ucf -p xc6slx16-csg324-3 TM_UART.ngc TM_UART.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TM_UART_map.ncd TM_UART.ngd TM_UART.pcf 
+par -w -intstyle ise -ol high -mt off TM_UART_map.ncd TM_UART.ncd TM_UART.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TM_UART.twx TM_UART.ncd -o TM_UART.twr TM_UART.pcf -ucf UART.ucf 
+bitgen -intstyle ise -f TM_UART.ut TM_UART.ncd 
+bitgen -intstyle ise -f TM_UART.ut TM_UART.ncd 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim TM_UART.ngc TM_UART_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UART.ucf -p xc6slx16-csg324-3 TM_UART.ngc TM_UART.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TM_UART_map.ncd TM_UART.ngd TM_UART.pcf 
+par -w -intstyle ise -ol high -mt off TM_UART_map.ncd TM_UART.ncd TM_UART.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TM_UART.twx TM_UART.ncd -o TM_UART.twr TM_UART.pcf -ucf UART.ucf 
+bitgen -intstyle ise -f TM_UART.ut TM_UART.ncd 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UART.ucf -p xc6slx16-csg324-3 TM_UART.ngc TM_UART.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TM_UART_map.ncd TM_UART.ngd TM_UART.pcf 
+par -w -intstyle ise -ol high -mt off TM_UART_map.ncd TM_UART.ncd TM_UART.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TM_UART.twx TM_UART.ncd -o TM_UART.twr TM_UART.pcf -ucf UART.ucf 
+bitgen -intstyle ise -f TM_UART.ut TM_UART.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UART.ucf -p xc6slx16-csg324-3 TM_UART.ngc TM_UART.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TM_UART_map.ncd TM_UART.ngd TM_UART.pcf 
+par -w -intstyle ise -ol high -mt off TM_UART_map.ncd TM_UART.ncd TM_UART.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TM_UART.twx TM_UART.ncd -o TM_UART.twr TM_UART.pcf -ucf UART.ucf 
+bitgen -intstyle ise -f TM_UART.ut TM_UART.ncd 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UART.ucf -p xc6slx16-csg324-3 TM_UART.ngc TM_UART.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TM_UART_map.ncd TM_UART.ngd TM_UART.pcf 
+par -w -intstyle ise -ol high -mt off TM_UART_map.ncd TM_UART.ncd TM_UART.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TM_UART.twx TM_UART.ncd -o TM_UART.twr TM_UART.pcf -ucf UART.ucf 
+bitgen -intstyle ise -f TM_UART.ut TM_UART.ncd 
+bitgen -intstyle ise -f TM_UART.ut TM_UART.ncd 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim TM_UART.ngc TM_UART_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top10.ucf -uc UART.ucf -p xc6slx16-csg324-3 TM_UART.ngc TM_UART.ngd  
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim TM_UART.ngc TM_UART_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UART.ucf -p xc6slx16-csg324-3 TM_UART.ngc TM_UART.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TM_UART_map.ncd TM_UART.ngd TM_UART.pcf 
+par -w -intstyle ise -ol high -mt off TM_UART_map.ncd TM_UART.ncd TM_UART.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TM_UART.twx TM_UART.ncd -o TM_UART.twr TM_UART.pcf -ucf UART.ucf 
+bitgen -intstyle ise -f TM_UART.ut TM_UART.ncd 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/TM_UART.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/TM_UART.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim TM_UART.ngc TM_UART_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UART.ucf -p xc6slx16-csg324-3 TM_UART.ngc TM_UART.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TM_UART_map.ncd TM_UART.ngd TM_UART.pcf 
+par -w -intstyle ise -ol high -mt off TM_UART_map.ncd TM_UART.ncd TM_UART.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TM_UART.twx TM_UART.ncd -o TM_UART.twr TM_UART.pcf -ucf UART.ucf 
+bitgen -intstyle ise -f TM_UART.ut TM_UART.ncd 

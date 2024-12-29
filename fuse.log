@@ -1,126 +1,24 @@
-Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Windows/System32/DSD_Project/mac_testbech_isim_beh.exe -prj C:/Windows/System32/DSD_Project/mac_testbech_beh.prj work.mac_testbech work.glbl 
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Windows/System32/DSD_Project_Testing/top_module_tb_isim_beh.exe -prj C:/Windows/System32/DSD_Project_Testing/top_module_tb_beh.prj work.top_module_tb work.glbl 
 ISim P.58f (signature 0x7708f090)
 Number of CPUs detected in this system: 16
 Turning on mult-threading, number of parallel sub-compilation jobs: 32 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Windows/System32/DSD_Project/mac.v" into library work
-WARNING:HDLCompiler:31 - "C:/Windows/System32/DSD_Project/mac.v" Line 52: <acc_5> is already declared.
-WARNING:HDLCompiler:770 - "C:/Windows/System32/DSD_Project/mac.v" Line 52: Second declaration of acc_5 ignored
-Analyzing Verilog file "C:/Windows/System32/DSD_Project/mac_datapath.v" into library work
-Analyzing Verilog file "C:/Windows/System32/DSD_Project/mac_controller.v" into library work
-Analyzing Verilog file "C:/Windows/System32/DSD_Project/mac_testbech.v" into library work
+Analyzing Verilog file "C:/Windows/System32/DSD_Project_Testing/mac.v" into library work
+WARNING:HDLCompiler:31 - "C:/Windows/System32/DSD_Project_Testing/mac.v" Line 18: <acc_5> is already declared.
+WARNING:HDLCompiler:770 - "C:/Windows/System32/DSD_Project_Testing/mac.v" Line 18: Second declaration of acc_5 ignored
+Analyzing Verilog file "C:/Windows/System32/DSD_Project_Testing/controller.v" into library work
+Analyzing Verilog file "C:/Windows/System32/DSD_Project_Testing/top_module.v" into library work
+Analyzing Verilog file "C:/Windows/System32/DSD_Project_Testing/top_module_tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 156: Target <Result_0> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 157: Target <Result_1> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 158: Target <Result_2> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 159: Target <Result_3> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 160: Target <Result_4> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 161: Target <Result_5> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 162: Target <Result_6> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 163: Target <Result_7> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 164: Target <Result_8> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 165: Target <Result_8> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 167: Target <Result_10> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 168: Target <Result_11> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 169: Target <Result_12> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 170: Target <Result_13> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 171: Target <Result_14> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 172: Target <Result_15> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 173: Target <Result_16> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 174: Target <Result_17> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 175: Target <Result_18> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 176: Target <Result_19> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 178: Target <Result_20> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 179: Target <Result_21> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 180: Target <Result_22> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 181: Target <Result_23> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 182: Target <Result_24> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 183: Target <Result_25> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 184: Target <Result_26> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 185: Target <Result_27> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 186: Target <Result_28> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 187: Target <Result_29> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 189: Target <Result_30> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 190: Target <Result_31> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 191: Target <Result_32> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 192: Target <Result_33> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 193: Target <Result_34> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 194: Target <Result_35> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 195: Target <Result_36> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 196: Target <Result_37> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 197: Target <Result_38> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 198: Target <Result_39> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 200: Target <Result_40> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 201: Target <Result_41> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 202: Target <Result_42> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 203: Target <Result_43> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 204: Target <Result_44> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 205: Target <Result_45> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 206: Target <Result_46> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 207: Target <Result_47> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 208: Target <Result_48> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 209: Target <Result_49> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 211: Target <Result_50> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 212: Target <Result_51> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 213: Target <Result_52> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 214: Target <Result_53> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 215: Target <Result_54> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 216: Target <Result_55> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 217: Target <Result_56> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 218: Target <Result_57> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 219: Target <Result_58> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 220: Target <Result_59> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 222: Target <Result_60> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 223: Target <Result_61> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 224: Target <Result_62> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 225: Target <Result_63> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 226: Target <Result_64> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 227: Target <Result_65> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 228: Target <Result_66> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 229: Target <Result_67> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 230: Target <Result_68> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 231: Target <Result_69> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 233: Target <Result_70> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 234: Target <Result_71> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 235: Target <Result_72> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 236: Target <Result_73> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 237: Target <Result_74> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 238: Target <Result_75> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 239: Target <Result_76> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 240: Target <Result_77> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 241: Target <Result_78> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 242: Target <Result_79> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 244: Target <Result_80> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 245: Target <Result_81> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 246: Target <Result_82> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 247: Target <Result_83> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 248: Target <Result_84> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 249: Target <Result_85> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 250: Target <Result_86> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 251: Target <Result_87> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 252: Target <Result_88> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 253: Target <Result_89> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 255: Target <Result_90> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 256: Target <Result_91> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 257: Target <Result_92> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 258: Target <Result_93> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 259: Target <Result_94> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 260: Target <Result_95> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 261: Target <Result_96> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 262: Target <Result_97> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 263: Target <Result_98> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 264: Target <Result_99> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:329 - "C:/Windows/System32/DSD_Project/mac_controller.v" Line 266: Target <Result_calculated> of concurrent assignment or output port connection should be a net type.
-WARNING:HDLCompiler:1016 - "C:/Windows/System32/DSD_Project/mac_datapath.v" Line 459: Port r_ij is not connected to this instance
 Completed static elaboration
+Compiling module controller
 Compiling module mac
-Compiling module mac_datapath
-Compiling module mac_controller
-Compiling module mac_testbech
+Compiling module top_module
+Compiling module top_module_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 5 Verilog Units
-Built simulation executable C:/Windows/System32/DSD_Project/mac_testbech_isim_beh.exe
-Fuse Memory Usage: 33024 KB
-Fuse CPU Usage: 452 ms
+Built simulation executable C:/Windows/System32/DSD_Project_Testing/top_module_tb_isim_beh.exe
+Fuse Memory Usage: 29960 KB
+Fuse CPU Usage: 327 ms

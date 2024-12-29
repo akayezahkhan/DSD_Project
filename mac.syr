@@ -1,0 +1,387 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: mac.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mac.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mac"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : mac
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Windows\System32\DSD_Project_Testing\mac.v" into library work
+Parsing module <mac>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mac>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mac>.
+    Related source file is "C:\Windows\System32\DSD_Project_Testing\mac.v".
+    Found 32-bit register for signal <SOP>.
+    Found 32-bit register for signal <acc_0>.
+    Found 32-bit register for signal <acc_1>.
+    Found 32-bit register for signal <acc_2>.
+    Found 32-bit adder for signal <n0044> created at line 26.
+    Found 32-bit adder for signal <acc_0[31]_acc_2[31]_add_4_OUT> created at line 26.
+    Found 16x16-bit multiplier for signal <a_i_0[15]_b_j_0[15]_MuLt_0_OUT> created at line 23.
+    Found 16x16-bit multiplier for signal <a_i_1[15]_b_j_1[15]_MuLt_1_OUT> created at line 24.
+    Found 16x16-bit multiplier for signal <a_i_2[15]_b_j_2[15]_MuLt_2_OUT> created at line 25.
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 128 D-type flip-flop(s).
+Unit <mac> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 16x16-bit multiplier                                  : 3
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 2
+# Registers                                            : 4
+ 32-bit register                                       : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <mac>.
+	Multiplier <Mmult_a_i_2[15]_b_j_2[15]_MuLt_2_OUT> in block <mac> and adder/subtractor <Madd_acc_0[31]_acc_2[31]_add_4_OUT> in block <mac> are combined into a MAC<Maddsub_a_i_2[15]_b_j_2[15]_MuLt_2_OUT>.
+	The following registers are also absorbed by the MAC: <acc_2> in block <mac>.
+	Multiplier <Mmult_a_i_0[15]_b_j_0[15]_MuLt_0_OUT> in block <mac> and adder/subtractor <Madd_n0044> in block <mac> are combined into a MAC<Maddsub_a_i_0[15]_b_j_0[15]_MuLt_0_OUT>.
+	The following registers are also absorbed by the MAC: <acc_0> in block <mac>.
+	Found pipelined multiplier on signal <a_i_1[15]_b_j_1[15]_MuLt_1_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_a_i_1[15]_b_j_1[15]_MuLt_1_OUT by adding 1 register level(s).
+Unit <mac> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 2
+ 16x16-to-32-bit MAC                                   : 2
+# Multipliers                                          : 1
+ 16x16-bit registered multiplier                       : 1
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mac> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mac, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mac.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3
+#      GND                         : 1
+#      LUT2                        : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 32
+#      FDCE                        : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 130
+#      IBUF                        : 98
+#      OBUF                        : 32
+# DSPs                             : 3
+#      DSP48A1                     : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              32  out of  18224     0%  
+ Number of Slice LUTs:                    1  out of   9112     0%  
+    Number used as Logic:                 1  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     33
+   Number with an unused Flip Flop:       1  out of     33     3%  
+   Number with an unused LUT:            32  out of     33    96%  
+   Number of fully used LUT-FF pairs:     0  out of     33     0%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                         131
+ Number of bonded IOBs:                 131  out of    232    56%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+ Number of DSP48A1s:                      3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 35    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.319ns (Maximum Frequency: 158.257MHz)
+   Minimum input arrival time before clock: 6.117ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.319ns (frequency: 158.257MHz)
+  Total number of paths / destination ports: 75296 / 32
+-------------------------------------------------------------------------
+Delay:               6.319ns (Levels of Logic = 1)
+  Source:            Maddsub_a_i_0[15]_b_j_0[15]_MuLt_0_OUT (DSP)
+  Destination:       r_ij_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Maddsub_a_i_0[15]_b_j_0[15]_MuLt_0_OUT to r_ij_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->PCOUT47    1   3.374   0.000  Maddsub_a_i_0[15]_b_j_0[15]_MuLt_0_OUT (Maddsub_a_i_0[15]_b_j_0[15]_MuLt_0_OUT_PCOUT_to_Maddsub_a_i_2[15]_b_j_2[15]_MuLt_2_OUT_PCIN_47)
+     DSP48A1:PCIN47->P31    1   2.264   0.579  Maddsub_a_i_2[15]_b_j_2[15]_MuLt_2_OUT (acc_0[31]_acc_2[31]_add_4_OUT<31>)
+     FDCE:D                    0.102          r_ij_31
+    ----------------------------------------
+    Total                      6.319ns (5.740ns logic, 0.579ns route)
+                                       (90.8% logic, 9.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 166 / 163
+-------------------------------------------------------------------------
+Offset:              6.117ns (Levels of Logic = 1)
+  Source:            b_j_1<15> (PAD)
+  Destination:       Mmult_a_i_1[15]_b_j_1[15]_MuLt_1_OUT (DSP)
+  Destination Clock: clk rising
+
+  Data Path: b_j_1<15> to Mmult_a_i_1[15]_b_j_1[15]_MuLt_1_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  b_j_1_15_IBUF (b_j_1_15_IBUF)
+     DSP48A1:A15               4.316          Mmult_a_i_1[15]_b_j_1[15]_MuLt_1_OUT
+    ----------------------------------------
+    Total                      6.117ns (5.538ns logic, 0.579ns route)
+                                       (90.5% logic, 9.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            r_ij_31 (FF)
+  Destination:       SOP<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: r_ij_31 to SOP<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.447   0.579  r_ij_31 (r_ij_31)
+     OBUF:I->O                 2.571          SOP_31_OBUF (SOP<31>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.319|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.10 secs
+ 
+--> 
+
+Total memory usage is 4498464 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

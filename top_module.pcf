@@ -1,0 +1,24 @@
+//! **************************************************************************
+// Written by: Map P.58f on Fri Dec 27 15:28:02 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "START_CONTROLLER" LOCATE = SITE "T9" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "DONE" LOCATE = SITE "T11" LEVEL 1;
+COMP "rst" LOCATE = SITE "T10" LEVEL 1;
+PIN Mac/Maddsub_acc_2_pins<92> = BEL "Mac/Maddsub_acc_2" PINNAME CLK;
+PIN Mac/Maddsub_acc_0_pins<92> = BEL "Mac/Maddsub_acc_0" PINNAME CLK;
+PIN Mac/Mmult_acc_1_pins<92> = BEL "Mac/Mmult_acc_1" PINNAME CLK;
+TIMEGRP sys_clk_pin = BEL "i_0" BEL "i_1" BEL "j_0" BEL "j_1" BEL "j_2" BEL
+        "Results_0" BEL "Results_1" BEL "Results_2" BEL "Results_3" BEL
+        "Results_4" BEL "Results_5" BEL "Results_6" BEL "Results_7" BEL
+        "Results_8" BEL "Results_9" BEL "Results_10" BEL "Results_11" BEL
+        "Results_12" BEL "Results_13" BEL "Results_14" BEL "Results_15" BEL
+        "Controller/state_FSM_FFd1" BEL "Controller/state_FSM_FFd3" BEL
+        "Controller/state_FSM_FFd2" PIN "Mac/Maddsub_acc_2_pins<92>" PIN
+        "Mac/Maddsub_acc_0_pins<92>" PIN "Mac/Mmult_acc_1_pins<92>" BEL
+        "clk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

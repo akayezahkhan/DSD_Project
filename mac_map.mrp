@@ -1,0 +1,604 @@
+Release 14.5 Map P.58f (nt64)
+Xilinx Mapping Report File for Design 'mac'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o mac_map.ncd mac.ngd mac.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sun Dec 22 12:45:06 2024
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Slice Logic Utilization:
+  Number of Slice Registers:                    32 out of  18,224    1%
+    Number used as Flip Flops:                  32
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                         15 out of   9,112    1%
+    Number used as logic:                       12 out of   9,112    1%
+      Number using O6 output only:               4
+      Number using O5 output only:               0
+      Number using O5 and O6:                    8
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   2,176    0%
+    Number used exclusively as route-thrus:      3
+      Number with same-slice register load:      3
+      Number with same-slice carry load:         0
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    10 out of   2,278    1%
+  Number of MUXCYs used:                         8 out of   4,556    1%
+  Number of LUT Flip Flop pairs used:           31
+    Number with an unused Flip Flop:             3 out of      31    9%
+    Number with an unused LUT:                  16 out of      31   51%
+    Number of fully used LUT-FF pairs:          12 out of      31   38%
+    Number of unique control sets:               1
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        14 out of     232    6%
+    Number of LOCed IOBs:                       14 out of      14  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            3 out of      32    9%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.41
+
+Peak Memory Usage:  4485 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 121 block(s) removed
+   2 block(s) optimized away
+ 168 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT31" (ROM) removed.
+ The signal "acc_0<31>" is loadless and has been removed.
+  Loadless block "acc_0_31" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<31>" is loadless and has been
+removed.
+ The signal "acc_1<31>" is loadless and has been removed.
+  Loadless block "acc_1_31" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<31>" is loadless and has been
+removed.
+ The signal "acc_2<31>" is loadless and has been removed.
+  Loadless block "acc_2_31" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<31>" is loadless and has been
+removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>10" (ROM) removed.
+ The signal "acc_0<10>" is loadless and has been removed.
+  Loadless block "acc_0_10" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<10>" is loadless and has been
+removed.
+ The signal "acc_1<10>" is loadless and has been removed.
+  Loadless block "acc_1_10" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<10>" is loadless and has been
+removed.
+ The signal "acc_2<10>" is loadless and has been removed.
+  Loadless block "acc_2_10" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<10>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT9" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT9" (ROM) removed.
+   The signal "acc_0<9>" is loadless and has been removed.
+    Loadless block "acc_0_9" (FF) removed.
+     The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<9>" is loadless and has been
+removed.
+   The signal "acc_1<9>" is loadless and has been removed.
+    Loadless block "acc_1_9" (FF) removed.
+     The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<9>" is loadless and has been
+removed.
+   The signal "acc_2<9>" is loadless and has been removed.
+    Loadless block "acc_2_9" (FF) removed.
+     The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<9>" is loadless and has been
+removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>11" (ROM) removed.
+ The signal "acc_0<11>" is loadless and has been removed.
+  Loadless block "acc_0_11" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<11>" is loadless and has been
+removed.
+ The signal "acc_1<11>" is loadless and has been removed.
+  Loadless block "acc_1_11" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<11>" is loadless and has been
+removed.
+ The signal "acc_2<11>" is loadless and has been removed.
+  Loadless block "acc_2_11" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<11>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT10" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT10" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>12" (ROM) removed.
+ The signal "acc_0<12>" is loadless and has been removed.
+  Loadless block "acc_0_12" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<12>" is loadless and has been
+removed.
+ The signal "acc_1<12>" is loadless and has been removed.
+  Loadless block "acc_1_12" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<12>" is loadless and has been
+removed.
+ The signal "acc_2<12>" is loadless and has been removed.
+  Loadless block "acc_2_12" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<12>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT11" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT11" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>13" (ROM) removed.
+ The signal "acc_0<13>" is loadless and has been removed.
+  Loadless block "acc_0_13" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<13>" is loadless and has been
+removed.
+ The signal "acc_1<13>" is loadless and has been removed.
+  Loadless block "acc_1_13" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<13>" is loadless and has been
+removed.
+ The signal "acc_2<13>" is loadless and has been removed.
+  Loadless block "acc_2_13" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<13>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT12" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT12" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>14" (ROM) removed.
+ The signal "acc_0<14>" is loadless and has been removed.
+  Loadless block "acc_0_14" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<14>" is loadless and has been
+removed.
+ The signal "acc_1<14>" is loadless and has been removed.
+  Loadless block "acc_1_14" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<14>" is loadless and has been
+removed.
+ The signal "acc_2<14>" is loadless and has been removed.
+  Loadless block "acc_2_14" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<14>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT13" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT13" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>15" (ROM) removed.
+ The signal "acc_0<15>" is loadless and has been removed.
+  Loadless block "acc_0_15" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<15>" is loadless and has been
+removed.
+ The signal "acc_1<15>" is loadless and has been removed.
+  Loadless block "acc_1_15" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<15>" is loadless and has been
+removed.
+ The signal "acc_2<15>" is loadless and has been removed.
+  Loadless block "acc_2_15" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<15>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT14" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT14" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>16" (ROM) removed.
+ The signal "acc_0<16>" is loadless and has been removed.
+  Loadless block "acc_0_16" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<16>" is loadless and has been
+removed.
+ The signal "acc_1<16>" is loadless and has been removed.
+  Loadless block "acc_1_16" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<16>" is loadless and has been
+removed.
+ The signal "acc_2<16>" is loadless and has been removed.
+  Loadless block "acc_2_16" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<16>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT15" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT15" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>17" (ROM) removed.
+ The signal "acc_0<17>" is loadless and has been removed.
+  Loadless block "acc_0_17" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<17>" is loadless and has been
+removed.
+ The signal "acc_1<17>" is loadless and has been removed.
+  Loadless block "acc_1_17" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<17>" is loadless and has been
+removed.
+ The signal "acc_2<17>" is loadless and has been removed.
+  Loadless block "acc_2_17" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<17>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT16" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT16" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>18" (ROM) removed.
+ The signal "acc_0<18>" is loadless and has been removed.
+  Loadless block "acc_0_18" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<18>" is loadless and has been
+removed.
+ The signal "acc_1<18>" is loadless and has been removed.
+  Loadless block "acc_1_18" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<18>" is loadless and has been
+removed.
+ The signal "acc_2<18>" is loadless and has been removed.
+  Loadless block "acc_2_18" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<18>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT17" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT17" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>19" (ROM) removed.
+ The signal "acc_0<19>" is loadless and has been removed.
+  Loadless block "acc_0_19" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<19>" is loadless and has been
+removed.
+ The signal "acc_1<19>" is loadless and has been removed.
+  Loadless block "acc_1_19" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<19>" is loadless and has been
+removed.
+ The signal "acc_2<19>" is loadless and has been removed.
+  Loadless block "acc_2_19" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<19>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT18" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT18" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>20" (ROM) removed.
+ The signal "acc_0<20>" is loadless and has been removed.
+  Loadless block "acc_0_20" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<20>" is loadless and has been
+removed.
+ The signal "acc_1<20>" is loadless and has been removed.
+  Loadless block "acc_1_20" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<20>" is loadless and has been
+removed.
+ The signal "acc_2<20>" is loadless and has been removed.
+  Loadless block "acc_2_20" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<20>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT19" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT19" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>21" (ROM) removed.
+ The signal "acc_0<21>" is loadless and has been removed.
+  Loadless block "acc_0_21" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<21>" is loadless and has been
+removed.
+ The signal "acc_1<21>" is loadless and has been removed.
+  Loadless block "acc_1_21" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<21>" is loadless and has been
+removed.
+ The signal "acc_2<21>" is loadless and has been removed.
+  Loadless block "acc_2_21" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<21>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT20" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT20" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>22" (ROM) removed.
+ The signal "acc_0<22>" is loadless and has been removed.
+  Loadless block "acc_0_22" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<22>" is loadless and has been
+removed.
+ The signal "acc_1<22>" is loadless and has been removed.
+  Loadless block "acc_1_22" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<22>" is loadless and has been
+removed.
+ The signal "acc_2<22>" is loadless and has been removed.
+  Loadless block "acc_2_22" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<22>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT21" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT21" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>23" (ROM) removed.
+ The signal "acc_0<23>" is loadless and has been removed.
+  Loadless block "acc_0_23" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<23>" is loadless and has been
+removed.
+ The signal "acc_1<23>" is loadless and has been removed.
+  Loadless block "acc_1_23" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<23>" is loadless and has been
+removed.
+ The signal "acc_2<23>" is loadless and has been removed.
+  Loadless block "acc_2_23" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<23>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT22" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT22" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>24" (ROM) removed.
+ The signal "acc_0<24>" is loadless and has been removed.
+  Loadless block "acc_0_24" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<24>" is loadless and has been
+removed.
+ The signal "acc_1<24>" is loadless and has been removed.
+  Loadless block "acc_1_24" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<24>" is loadless and has been
+removed.
+ The signal "acc_2<24>" is loadless and has been removed.
+  Loadless block "acc_2_24" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<24>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT23" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT23" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>25" (ROM) removed.
+ The signal "acc_0<25>" is loadless and has been removed.
+  Loadless block "acc_0_25" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<25>" is loadless and has been
+removed.
+ The signal "acc_1<25>" is loadless and has been removed.
+  Loadless block "acc_1_25" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<25>" is loadless and has been
+removed.
+ The signal "acc_2<25>" is loadless and has been removed.
+  Loadless block "acc_2_25" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<25>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT24" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT24" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>26" (ROM) removed.
+ The signal "acc_0<26>" is loadless and has been removed.
+  Loadless block "acc_0_26" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<26>" is loadless and has been
+removed.
+ The signal "acc_1<26>" is loadless and has been removed.
+  Loadless block "acc_1_26" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<26>" is loadless and has been
+removed.
+ The signal "acc_2<26>" is loadless and has been removed.
+  Loadless block "acc_2_26" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<26>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT25" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT25" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>27" (ROM) removed.
+ The signal "acc_0<27>" is loadless and has been removed.
+  Loadless block "acc_0_27" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<27>" is loadless and has been
+removed.
+ The signal "acc_1<27>" is loadless and has been removed.
+  Loadless block "acc_1_27" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<27>" is loadless and has been
+removed.
+ The signal "acc_2<27>" is loadless and has been removed.
+  Loadless block "acc_2_27" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<27>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT26" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT26" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>28" (ROM) removed.
+ The signal "acc_0<28>" is loadless and has been removed.
+  Loadless block "acc_0_28" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<28>" is loadless and has been
+removed.
+ The signal "acc_1<28>" is loadless and has been removed.
+  Loadless block "acc_1_28" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<28>" is loadless and has been
+removed.
+ The signal "acc_2<28>" is loadless and has been removed.
+  Loadless block "acc_2_28" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<28>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT27" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT27" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>29" (ROM) removed.
+ The signal "acc_0<29>" is loadless and has been removed.
+  Loadless block "acc_0_29" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<29>" is loadless and has been
+removed.
+ The signal "acc_1<29>" is loadless and has been removed.
+  Loadless block "acc_1_29" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<29>" is loadless and has been
+removed.
+ The signal "acc_2<29>" is loadless and has been removed.
+  Loadless block "acc_2_29" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<29>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT28" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT28" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>30" (ROM) removed.
+ The signal "acc_0<30>" is loadless and has been removed.
+  Loadless block "acc_0_30" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<30>" is loadless and has been
+removed.
+ The signal "acc_1<30>" is loadless and has been removed.
+  Loadless block "acc_1_30" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<30>" is loadless and has been
+removed.
+ The signal "acc_2<30>" is loadless and has been removed.
+  Loadless block "acc_2_30" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<30>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT29" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT29" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>31" (ROM) removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT30" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT30" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>8" (ROM) removed.
+ The signal "acc_0<8>" is loadless and has been removed.
+  Loadless block "acc_0_8" (FF) removed.
+   The signal "a_i_0[15]_b_j_0[15]_MuLt_10_OUT<8>" is loadless and has been
+removed.
+ The signal "acc_1<8>" is loadless and has been removed.
+  Loadless block "acc_1_8" (FF) removed.
+   The signal "a_i_1[15]_b_j_1[15]_MuLt_11_OUT<8>" is loadless and has been
+removed.
+ The signal "acc_2<8>" is loadless and has been removed.
+  Loadless block "acc_2_8" (FF) removed.
+   The signal "a_i_2[15]_b_j_2[15]_MuLt_12_OUT<8>" is loadless and has been
+removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT7" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT7" (ROM) removed.
+Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT_lut<0>9" (ROM) removed.
+ The signal "Madd_acc_0[31]_acc_2[31]_add_14_OUT8" is loadless and has been
+removed.
+  Loadless block "Madd_acc_0[31]_acc_2[31]_add_14_OUT8" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Led<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| Led<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| Led<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| Led<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| Led<4>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| Led<5>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| Led<6>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| Led<7>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| W_en                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| rst                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sel<0>                             | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sel<1>                             | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sel<2>                             | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

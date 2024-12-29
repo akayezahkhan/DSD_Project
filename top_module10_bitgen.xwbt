@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Windows\System32\DSD_Project_Testing\top_module10.ncd
+OUTFILE=C:\Windows\System32\DSD_Project_Testing\top_module10.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Windows\System32\DSD_Project_Testing
+LICENSE=WebPack
+USER_INFO=__0_0_0

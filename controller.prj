@@ -1,0 +1,2 @@
+verilog work "datapath.v"
+verilog work "controller.v"

@@ -1,0 +1,969 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> Reading design: top_module10.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_module10.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_module10"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : top_module10
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Windows\System32\DSD_Project_Testing\mac10.v" into library work
+Parsing module <mac10>.
+WARNING:HDLCompiler:31 - "C:\Windows\System32\DSD_Project_Testing\mac10.v" Line 52: <acc_5> is already declared.
+WARNING:HDLCompiler:770 - "C:\Windows\System32\DSD_Project_Testing\mac10.v" Line 52: Second declaration of acc_5 ignored
+INFO:HDLCompiler:1408 - "C:\Windows\System32\DSD_Project_Testing\mac10.v" Line 52. acc_5 is declared here
+Analyzing Verilog file "C:\Windows\System32\DSD_Project_Testing\controller.v" into library work
+Parsing module <controller>.
+Analyzing Verilog file "C:\Windows\System32\DSD_Project_Testing\top_module10.v" into library work
+Parsing module <top_module10>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top_module10>.
+
+Elaborating module <controller>.
+WARNING:HDLCompiler:1127 - "C:\Windows\System32\DSD_Project_Testing\top_module10.v" Line 356: Assignment to matrix_res ignored, since the identifier is never used
+
+Elaborating module <mac10>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_module10>.
+    Related source file is "C:\Windows\System32\DSD_Project_Testing\top_module10.v".
+    Found 32-bit register for signal <j>.
+    Found 32-bit register for signal <i>.
+    Found 80-bit register for signal <n1667[79:0]>.
+    Found 80-bit register for signal <n1668[79:0]>.
+    Found 16-bit register for signal <Results>.
+    Found 32-bit adder for signal <j[31]_GND_1_o_add_8_OUT> created at line 319.
+    Found 32-bit adder for signal <i[31]_GND_1_o_add_11_OUT> created at line 322.
+    Found 32-bit adder for signal <n1682> created at line 328.
+    Found 32-bit adder for signal <n1684> created at line 329.
+    Found 32-bit adder for signal <n1686> created at line 330.
+    Found 32-bit adder for signal <n1688> created at line 331.
+    Found 32-bit adder for signal <n1690> created at line 332.
+    Found 32-bit adder for signal <n1692> created at line 333.
+    Found 32-bit adder for signal <n1694> created at line 334.
+    Found 32-bit adder for signal <n1696> created at line 335.
+    Found 32-bit adder for signal <n1698> created at line 336.
+    Found 32-bit adder for signal <n1701> created at line 339.
+    Found 32-bit adder for signal <n1703> created at line 340.
+    Found 32-bit adder for signal <n1705> created at line 341.
+    Found 32-bit adder for signal <n1707> created at line 342.
+    Found 32-bit adder for signal <n1709> created at line 343.
+    Found 32-bit adder for signal <n1711> created at line 344.
+    Found 32-bit adder for signal <n1713> created at line 345.
+    Found 32-bit adder for signal <n1715> created at line 346.
+    Found 32-bit adder for signal <n1717> created at line 347.
+    Found 5x32-bit multiplier for signal <n1680> created at line 327.
+    Found 128x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_47_OUT>
+    Found 128x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_49_OUT>
+    Found 128x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_51_OUT>
+    Found 128x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_53_OUT>
+    Found 128x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_55_OUT>
+    Found 128x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_57_OUT>
+    Found 128x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_59_OUT>
+    Found 128x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_61_OUT>
+    Found 128x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_63_OUT>
+    Found 128x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_65_OUT>
+    Found 128x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_19_OUT>
+    Found 128x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_22_OUT>
+    Found 128x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_25_OUT>
+    Found 128x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_28_OUT>
+    Found 128x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_31_OUT>
+    Found 128x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_34_OUT>
+    Found 128x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_37_OUT>
+    Found 128x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_40_OUT>
+    Found 128x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_43_OUT>
+    Found 128x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_46_OUT>
+    Found 32-bit comparator greater for signal <GND_1_o_i[31]_LessThan_7_o> created at line 317
+    Found 32-bit comparator greater for signal <GND_1_o_j[31]_LessThan_8_o> created at line 318
+    Summary:
+	inferred  20 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred  20 Adder/Subtractor(s).
+	inferred 240 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <top_module10> synthesized.
+
+Synthesizing Unit <controller>.
+    Related source file is "C:\Windows\System32\DSD_Project_Testing\controller.v".
+        IDLE_STATE = 3'b000
+        LOAD_STATE = 3'b001
+        MAC_STATE = 3'b010
+        STORE_STATE = 3'b011
+        DONE_STATE = 3'b100
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <controller> synthesized.
+
+Synthesizing Unit <mac10>.
+    Related source file is "C:\Windows\System32\DSD_Project_Testing\mac10.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit adder for signal <n0078> created at line 70.
+    Found 16-bit adder for signal <n0081> created at line 70.
+    Found 16-bit adder for signal <n0084> created at line 70.
+    Found 16-bit adder for signal <n0087> created at line 70.
+    Found 16-bit adder for signal <n0090> created at line 70.
+    Found 16-bit adder for signal <n0093> created at line 70.
+    Found 16-bit adder for signal <n0096> created at line 70.
+    Found 16-bit adder for signal <n0099> created at line 70.
+    Found 16-bit adder for signal <a_i_0[7]_a_i_9[7]_add_18_OUT> created at line 70.
+    Found 8x8-bit multiplier for signal <acc_0> created at line 56.
+    Found 8x8-bit multiplier for signal <acc_1> created at line 57.
+    Found 8x8-bit multiplier for signal <acc_2> created at line 58.
+    Found 8x8-bit multiplier for signal <acc_3> created at line 59.
+    Found 8x8-bit multiplier for signal <acc_4> created at line 60.
+    Found 8x8-bit multiplier for signal <acc_5> created at line 61.
+    Found 8x8-bit multiplier for signal <acc_6> created at line 62.
+    Found 8x8-bit multiplier for signal <acc_7> created at line 63.
+    Found 8x8-bit multiplier for signal <acc_8> created at line 64.
+    Found 8x8-bit multiplier for signal <acc_9> created at line 65.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  10 Multiplier(s).
+	inferred   9 Adder/Subtractor(s).
+	inferred  16 Latch(s).
+Unit <mac10> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 20
+ 128x8-bit single-port Read Only RAM                   : 20
+# Multipliers                                          : 11
+ 32x5-bit multiplier                                   : 1
+ 8x8-bit multiplier                                    : 10
+# Adders/Subtractors                                   : 29
+ 16-bit adder                                          : 9
+ 32-bit adder                                          : 20
+# Registers                                            : 5
+ 16-bit register                                       : 1
+ 32-bit register                                       : 2
+ 80-bit register                                       : 2
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 6
+ 32-bit 2-to-1 multiplexer                             : 6
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <mac10>.
+	The following adders/subtractors are grouped into adder tree <Madd_a_i_0[7]_a_i_9[7]_add_18_OUT1> :
+ 	<Madd_n0078> in block <mac10>, 	<Madd_n0081> in block <mac10>, 	<Madd_n0084> in block <mac10>, 	<Madd_n0087> in block <mac10>, 	<Madd_n0090> in block <mac10>, 	<Madd_n0093> in block <mac10>, 	<Madd_n0096> in block <mac10>, 	<Madd_n0099> in block <mac10>, 	<Madd_a_i_0[7]_a_i_9[7]_add_18_OUT> in block <mac10>.
+	Multiplier <Mmult_acc_9> in block <mac10> and adder/subtractor <ADDER_FOR_MULTADD_Madd8> in block <mac10> are combined into a MAC<Maddsub_acc_9>.
+	Multiplier <Mmult_acc_8> in block <mac10> and adder/subtractor <ADDER_FOR_MULTADD_Madd7> in block <mac10> are combined into a MAC<Maddsub_acc_8>.
+	Multiplier <Mmult_acc_7> in block <mac10> and adder/subtractor <ADDER_FOR_MULTADD_Madd6> in block <mac10> are combined into a MAC<Maddsub_acc_7>.
+	Multiplier <Mmult_acc_6> in block <mac10> and adder/subtractor <ADDER_FOR_MULTADD_Madd5> in block <mac10> are combined into a MAC<Maddsub_acc_6>.
+	Multiplier <Mmult_acc_5> in block <mac10> and adder/subtractor <ADDER_FOR_MULTADD_Madd4> in block <mac10> are combined into a MAC<Maddsub_acc_5>.
+	Multiplier <Mmult_acc_4> in block <mac10> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <mac10> are combined into a MAC<Maddsub_acc_4>.
+	Multiplier <Mmult_acc_3> in block <mac10> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <mac10> are combined into a MAC<Maddsub_acc_3>.
+	Multiplier <Mmult_acc_2> in block <mac10> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <mac10> are combined into a MAC<Maddsub_acc_2>.
+	Multiplier <Mmult_acc_0> in block <mac10> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <mac10> are combined into a MAC<Maddsub_acc_0>.
+Unit <mac10> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top_module10>.
+INFO:Xst:3226 - The RAM <Mram_GND_1_o_X_1_o_wide_mux_22_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <a_i_9>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1682>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_GND_1_o_X_1_o_wide_mux_25_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <a_i_9_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1684>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_GND_1_o_X_1_o_wide_mux_28_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <a_i_9_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1686>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_GND_1_o_X_1_o_wide_mux_31_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <a_i_9_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1688>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_GND_1_o_X_1_o_wide_mux_34_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <a_i_9_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1690>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_GND_1_o_X_1_o_wide_mux_37_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <a_i_9_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1692>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_GND_1_o_X_1_o_wide_mux_40_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <a_i_9_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1694>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_GND_1_o_X_1_o_wide_mux_43_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <a_i_9_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1696>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_GND_1_o_X_1_o_wide_mux_46_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <a_i_9_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1698>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_GND_1_o_X_1_o_wide_mux_19_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <a_i_9_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1680>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_j[31]_X_1_o_wide_mux_51_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <b_j_9_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1703>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_j[31]_X_1_o_wide_mux_49_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <b_j_9>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1701>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_j[31]_X_1_o_wide_mux_53_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <b_j_9_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1705>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_j[31]_X_1_o_wide_mux_55_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <b_j_9_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1707>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_j[31]_X_1_o_wide_mux_57_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <b_j_9_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1709>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_j[31]_X_1_o_wide_mux_59_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <b_j_9_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1711>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_j[31]_X_1_o_wide_mux_61_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <b_j_9_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1713>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_j[31]_X_1_o_wide_mux_63_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <b_j_9_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1715>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_j[31]_X_1_o_wide_mux_65_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <b_j_9_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n1717>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_j[31]_X_1_o_wide_mux_47_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <b_j_9_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <START_MAC>     | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n3753<6:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <top_module10> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 20
+ 128x8-bit single-port block Read Only RAM             : 20
+# MACs                                                 : 9
+ 8x8-to-16-bit MAC                                     : 9
+# Multipliers                                          : 2
+ 32x5-bit multiplier                                   : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 20
+ 32-bit adder                                          : 2
+ 7-bit adder                                           : 18
+# Registers                                            : 80
+ Flip-Flops                                            : 80
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 6
+ 32-bit 2-to-1 multiplexer                             : 6
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_GND_1_o_X_1_o_wide_mux_28_OUT>, <Mram_GND_1_o_X_1_o_wide_mux_22_OUT> are packed into the single block RAM <Mram_GND_1_o_X_1_o_wide_mux_28_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_GND_1_o_X_1_o_wide_mux_25_OUT>, <Mram_GND_1_o_X_1_o_wide_mux_31_OUT> are packed into the single block RAM <Mram_GND_1_o_X_1_o_wide_mux_25_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_GND_1_o_X_1_o_wide_mux_34_OUT>, <Mram_GND_1_o_X_1_o_wide_mux_43_OUT> are packed into the single block RAM <Mram_GND_1_o_X_1_o_wide_mux_34_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_GND_1_o_X_1_o_wide_mux_37_OUT>, <Mram_GND_1_o_X_1_o_wide_mux_40_OUT> are packed into the single block RAM <Mram_GND_1_o_X_1_o_wide_mux_37_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_GND_1_o_X_1_o_wide_mux_46_OUT>, <Mram_GND_1_o_X_1_o_wide_mux_19_OUT> are packed into the single block RAM <Mram_GND_1_o_X_1_o_wide_mux_46_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_j[31]_X_1_o_wide_mux_53_OUT>, <Mram_j[31]_X_1_o_wide_mux_51_OUT> are packed into the single block RAM <Mram_j[31]_X_1_o_wide_mux_53_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_j[31]_X_1_o_wide_mux_49_OUT>, <Mram_j[31]_X_1_o_wide_mux_55_OUT> are packed into the single block RAM <Mram_j[31]_X_1_o_wide_mux_49_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_j[31]_X_1_o_wide_mux_57_OUT>, <Mram_j[31]_X_1_o_wide_mux_63_OUT> are packed into the single block RAM <Mram_j[31]_X_1_o_wide_mux_57_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_j[31]_X_1_o_wide_mux_59_OUT>, <Mram_j[31]_X_1_o_wide_mux_61_OUT> are packed into the single block RAM <Mram_j[31]_X_1_o_wide_mux_59_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_j[31]_X_1_o_wide_mux_65_OUT>, <Mram_j[31]_X_1_o_wide_mux_47_OUT> are packed into the single block RAM <Mram_j[31]_X_1_o_wide_mux_65_OUT1>
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+WARNING:Xst:2677 - Node <Mmult_n16801> of sequential type is unconnected in block <top_module10>.
+
+Optimizing unit <mac10> ...
+
+Optimizing unit <top_module10> ...
+WARNING:Xst:1293 - FF/Latch <i_31> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_30> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_29> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_28> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_27> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_26> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_25> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_24> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_23> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_22> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_21> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_20> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_19> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_18> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_17> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_16> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_15> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_14> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_13> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_12> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_11> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_10> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_9> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_8> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_7> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_6> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_5> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_4> has a constant value of 0 in block <top_module10>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <j_4> in Unit <top_module10> is equivalent to the following 27 FFs/Latches, which will be removed : <j_5> <j_6> <j_7> <j_8> <j_9> <j_10> <j_11> <j_12> <j_13> <j_14> <j_15> <j_16> <j_17> <j_18> <j_19> <j_20> <j_21> <j_22> <j_23> <j_24> <j_25> <j_26> <j_27> <j_28> <j_29> <j_30> <j_31> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_module10, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 28
+ Flip-Flops                                            : 28
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_module10.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 167
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 9
+#      LUT2                        : 16
+#      LUT3                        : 23
+#      LUT4                        : 19
+#      LUT5                        : 22
+#      LUT6                        : 28
+#      MUXCY                       : 24
+#      VCC                         : 1
+#      XORCY                       : 12
+# FlipFlops/Latches                : 44
+#      FDC                         : 3
+#      FDE                         : 25
+#      LDC                         : 16
+# RAMS                             : 10
+#      RAMB8BWER                   : 10
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 2
+#      OBUF                        : 17
+# DSPs                             : 11
+#      DSP48A1                     : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              44  out of  18224     0%  
+ Number of Slice LUTs:                  129  out of   9112     1%  
+    Number used as Logic:               129  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    162
+   Number with an unused Flip Flop:     118  out of    162    72%  
+   Number with an unused LUT:            33  out of    162    20%  
+   Number of fully used LUT-FF pairs:    11  out of    162     6%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    232     8%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                5  out of     32    15%  
+    Number using Block RAM only:          5
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+ Number of DSP48A1s:                     11  out of     32    34%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 38    |
+Controller/state_FSM_FFd2          | NONE(Mac10/SOP_15)     | 16    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 10.889ns (Maximum Frequency: 91.835MHz)
+   Minimum input arrival time before clock: 3.948ns
+   Maximum output required time after clock: 3.668ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.889ns (frequency: 91.835MHz)
+  Total number of paths / destination ports: 48723 / 197
+-------------------------------------------------------------------------
+Delay:               10.889ns (Levels of Logic = 12)
+  Source:            j_1 (FF)
+  Destination:       Mram_GND_1_o_X_1_o_wide_mux_46_OUT1 (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: j_1 to Mram_GND_1_o_X_1_o_wide_mux_46_OUT1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.447   1.059  j_1 (j_1)
+     LUT5:I0->O           18   0.203   0.000  Mcompar_GND_1_o_j[31]_LessThan_8_o_lut<0> (Mcompar_GND_1_o_j[31]_LessThan_8_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<0> (Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<1> (Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<2> (Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<3> (Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<4> (Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<5> (Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<5>)
+     MUXCY:CI->O          16   0.213   1.005  Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<6> (Mcompar_GND_1_o_j[31]_LessThan_8_o_cy<6>)
+     LUT6:I5->O            2   0.205   0.616  Mmux_i[31]_i[31]_mux_17_OUT261 (i[31]_i[31]_mux_17_OUT<3>)
+     DSP48A1:B3->M3       37   3.364   1.591  Mmult_n1680 (Madd_n1682_Madd_lut<3>)
+     LUT5:I2->O            1   0.205   0.580  Madd_n1690_Madd_cy<4>11 (Madd_n1690_Madd_cy<4>)
+     LUT3:I2->O            1   0.205   0.579  Madd_n1690_Madd_xor<6>11 (n1690<6>)
+     RAMB8BWER:ADDRAWRADDR9        0.350          Mram_GND_1_o_X_1_o_wide_mux_34_OUT1
+    ----------------------------------------
+    Total                     10.889ns (5.459ns logic, 5.430ns route)
+                                       (50.1% logic, 49.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              3.948ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       Results_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to Results_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.222   1.197  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           16   0.203   1.004  _n3778_inv1 (_n3778_inv)
+     FDE:CE                    0.322          Results_0
+    ----------------------------------------
+    Total                      3.948ns (1.747ns logic, 2.201ns route)
+                                       (44.2% logic, 55.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Controller/state_FSM_FFd2'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.744ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       Mac10/SOP_15 (LATCH)
+  Destination Clock: Controller/state_FSM_FFd2 falling
+
+  Data Path: rst to Mac10/SOP_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.222   1.092  rst_IBUF (rst_IBUF)
+     LDC:CLR                   0.430          Mac10/SOP_14
+    ----------------------------------------
+    Total                      2.744ns (1.652ns logic, 1.092ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              3.668ns (Levels of Logic = 1)
+  Source:            Controller/state_FSM_FFd1 (FF)
+  Destination:       DONE (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Controller/state_FSM_FFd1 to DONE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.650  Controller/state_FSM_FFd1 (Controller/state_FSM_FFd1)
+     OBUF:I->O                 2.571          DONE_OBUF (DONE)
+    ----------------------------------------
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Controller/state_FSM_FFd2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |   28.132|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+Controller/state_FSM_FFd2|         |    1.179|         |         |
+clk                      |   10.889|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.56 secs
+ 
+--> 
+
+Total memory usage is 4562592 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   49 (   0 filtered)
+Number of infos    :   32 (   0 filtered)
+

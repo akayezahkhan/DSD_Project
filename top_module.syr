@@ -1,0 +1,682 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: top_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_module.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_module"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : top_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Windows\System32\DSD_Project_Testing\mac.v" into library work
+Parsing module <mac>.
+WARNING:HDLCompiler:31 - "C:\Windows\System32\DSD_Project_Testing\mac.v" Line 18: <acc_5> is already declared.
+WARNING:HDLCompiler:770 - "C:\Windows\System32\DSD_Project_Testing\mac.v" Line 18: Second declaration of acc_5 ignored
+INFO:HDLCompiler:1408 - "C:\Windows\System32\DSD_Project_Testing\mac.v" Line 18. acc_5 is declared here
+Analyzing Verilog file "C:\Windows\System32\DSD_Project_Testing\controller.v" into library work
+Parsing module <controller>.
+Analyzing Verilog file "C:\Windows\System32\DSD_Project_Testing\top_module.v" into library work
+Parsing module <top_module>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top_module>.
+
+Elaborating module <controller>.
+WARNING:HDLCompiler:1127 - "C:\Windows\System32\DSD_Project_Testing\top_module.v" Line 135: Assignment to matrix_res ignored, since the identifier is never used
+
+Elaborating module <mac>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_module>.
+    Related source file is "C:\Windows\System32\DSD_Project_Testing\top_module.v".
+    Found 32-bit register for signal <j>.
+    Found 32-bit register for signal <i>.
+    Found 24-bit register for signal <n0183[23:0]>.
+    Found 24-bit register for signal <n0184[23:0]>.
+    Found 16-bit register for signal <Results>.
+    Found 32-bit adder for signal <j[31]_GND_1_o_add_8_OUT> created at line 113.
+    Found 32-bit adder for signal <i[31]_GND_1_o_add_11_OUT> created at line 116.
+    Found 32-bit adder for signal <n0198> created at line 122.
+    Found 32-bit adder for signal <n0200> created at line 123.
+    Found 32-bit adder for signal <n0203> created at line 125.
+    Found 32-bit adder for signal <n0205> created at line 126.
+    Found 3x32-bit multiplier for signal <n0196> created at line 121.
+    Found 16x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_26_OUT>
+    Found 16x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_28_OUT>
+    Found 16x8-bit Read Only RAM for signal <j[31]_X_1_o_wide_mux_30_OUT>
+    Found 16x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_19_OUT>
+    Found 16x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_22_OUT>
+    Found 16x8-bit Read Only RAM for signal <GND_1_o_X_1_o_wide_mux_25_OUT>
+    Found 32-bit comparator greater for signal <GND_1_o_i[31]_LessThan_7_o> created at line 111
+    Found 32-bit comparator greater for signal <GND_1_o_j[31]_LessThan_8_o> created at line 112
+    Summary:
+	inferred   6 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred 128 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <top_module> synthesized.
+
+Synthesizing Unit <controller>.
+    Related source file is "C:\Windows\System32\DSD_Project_Testing\controller.v".
+        IDLE_STATE = 3'b000
+        LOAD_STATE = 3'b001
+        MAC_STATE = 3'b010
+        STORE_STATE = 3'b011
+        DONE_STATE = 3'b100
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <controller> synthesized.
+
+Synthesizing Unit <mac>.
+    Related source file is "C:\Windows\System32\DSD_Project_Testing\mac.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit adder for signal <n0036> created at line 30.
+    Found 16-bit adder for signal <a_i_0[7]_a_i_2[7]_add_4_OUT> created at line 30.
+    Found 8x8-bit multiplier for signal <acc_0> created at line 22.
+    Found 8x8-bit multiplier for signal <acc_1> created at line 23.
+    Found 8x8-bit multiplier for signal <acc_2> created at line 24.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <SOP<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 Latch(s).
+Unit <mac> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 6
+ 16x8-bit single-port Read Only RAM                    : 6
+# Multipliers                                          : 4
+ 32x3-bit multiplier                                   : 1
+ 8x8-bit multiplier                                    : 3
+# Adders/Subtractors                                   : 8
+ 16-bit adder                                          : 2
+ 32-bit adder                                          : 6
+# Registers                                            : 5
+ 16-bit register                                       : 1
+ 24-bit register                                       : 2
+ 32-bit register                                       : 2
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 6
+ 32-bit 2-to-1 multiplexer                             : 6
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <mac>.
+	Multiplier <Mmult_acc_2> in block <mac> and adder/subtractor <Madd_a_i_0[7]_a_i_2[7]_add_4_OUT> in block <mac> are combined into a MAC<Maddsub_acc_2>.
+	Multiplier <Mmult_acc_0> in block <mac> and adder/subtractor <Madd_n0036> in block <mac> are combined into a MAC<Maddsub_acc_0>.
+Unit <mac> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top_module>.
+INFO:Xst:3231 - The small RAM <Mram_GND_1_o_X_1_o_wide_mux_22_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0198>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_GND_1_o_X_1_o_wide_mux_25_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0200>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_GND_1_o_X_1_o_wide_mux_19_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0196>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_j[31]_X_1_o_wide_mux_28_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0203>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_j[31]_X_1_o_wide_mux_30_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0205>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_j[31]_X_1_o_wide_mux_26_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0281<3:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <top_module> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 6
+ 16x8-bit single-port distributed Read Only RAM        : 6
+# MACs                                                 : 2
+ 8x8-to-16-bit MAC                                     : 2
+# Multipliers                                          : 2
+ 32x3-bit multiplier                                   : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 6
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 4
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 6
+ 32-bit 2-to-1 multiplexer                             : 6
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+WARNING:Xst:1293 - FF/Latch <a_i_2_sliced_8> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_sliced_9> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_sliced_10> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_sliced_11> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_15> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_14> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_13> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_12> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_sliced_sliced_0> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_sliced_sliced_1> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_sliced_sliced_2> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_sliced_sliced_3> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_sliced_8> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_sliced_9> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_sliced_10> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_sliced_11> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_15> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_14> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_13> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_12> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_sliced_sliced_0> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_sliced_sliced_1> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_sliced_sliced_2> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_sliced_sliced_3> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <mac> ...
+
+Optimizing unit <top_module> ...
+WARNING:Xst:1293 - FF/Latch <i_20> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_21> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_22> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_23> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_24> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_25> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_26> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_27> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_28> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_29> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_30> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_31> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_sliced_sliced_5> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_sliced_sliced_4> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_j_2_11> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_sliced_sliced_4> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_i_2_11> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_2> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_3> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_4> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_5> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_6> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_7> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_8> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_9> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_10> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_11> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_12> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_13> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_14> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_15> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_16> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_17> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_18> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_19> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <j_2> in Unit <top_module> is equivalent to the following 29 FFs/Latches, which will be removed : <j_3> <j_4> <j_5> <j_6> <j_7> <j_8> <j_9> <j_10> <j_11> <j_12> <j_13> <j_14> <j_15> <j_16> <j_17> <j_18> <j_19> <j_20> <j_21> <j_22> <j_23> <j_24> <j_25> <j_26> <j_27> <j_28> <j_29> <j_30> <j_31> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_module, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_module.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 99
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 4
+#      LUT2                        : 15
+#      LUT3                        : 5
+#      LUT4                        : 7
+#      LUT6                        : 14
+#      MUXCY                       : 25
+#      VCC                         : 1
+#      XORCY                       : 15
+# FlipFlops/Latches                : 40
+#      FDC                         : 3
+#      FDE                         : 21
+#      LDC                         : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 2
+#      OBUF                        : 17
+# DSPs                             : 3
+#      DSP48A1                     : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              40  out of  18224     0%  
+ Number of Slice LUTs:                   57  out of   9112     0%  
+    Number used as Logic:                57  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     83
+   Number with an unused Flip Flop:      43  out of     83    51%  
+   Number with an unused LUT:            26  out of     83    31%  
+   Number of fully used LUT-FF pairs:    14  out of     83    16%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    232     8%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+ Number of DSP48A1s:                      3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 27    |
+Controller/state_FSM_FFd2          | NONE(Mac/SOP_15)       | 16    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.187ns (Maximum Frequency: 139.149MHz)
+   Minimum input arrival time before clock: 3.948ns
+   Maximum output required time after clock: 3.668ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.187ns (frequency: 139.149MHz)
+  Total number of paths / destination ports: 5235 / 54
+-------------------------------------------------------------------------
+Delay:               7.187ns (Levels of Logic = 15)
+  Source:            i_1 (FF)
+  Destination:       Mac/Maddsub_acc_2 (DSP)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: i_1 to Mac/Maddsub_acc_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.447   0.961  i_1 (i_1)
+     LUT2:I0->O            1   0.203   0.000  Mcompar_GND_1_o_i[31]_LessThan_7_o_lut<0>1 (Mcompar_GND_1_o_i[31]_LessThan_7_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<0> (Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<1> (Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<2> (Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<3> (Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<4> (Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<5> (Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<5>)
+     MUXCY:CI->O          14   0.213   1.062  Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<6> (Mcompar_GND_1_o_i[31]_LessThan_7_o_cy<6>)
+     LUT6:I4->O            1   0.203   0.579  Mmux_i[31]_i[31]_mux_17_OUT11 (i[31]_i[31]_mux_17_OUT<0>)
+     MUXCY:DI->O           1   0.145   0.000  Mmult_n0196_Madd_cy<1> (Mmult_n0196_Madd_cy<1>)
+     XORCY:CI->O           1   0.180   0.579  Mmult_n0196_Madd_xor<2> (Mmult_n0196_Madd_2)
+     INV:I->O              1   0.206   0.000  Mmult_n0196_Madd1_lut<2>_INV_0 (Mmult_n0196_Madd1_lut<2>)
+     MUXCY:S->O            0   0.172   0.000  Mmult_n0196_Madd1_cy<2> (Mmult_n0196_Madd1_cy<2>)
+     XORCY:CI->O          10   0.180   0.857  Mmult_n0196_Madd1_xor<3> (Madd_n0198_Madd_lut<3>)
+     LUT2:I1->O            1   0.205   0.579  Mram_GND_1_o_X_1_o_wide_mux_25_OUT111 (Mram_GND_1_o_X_1_o_wide_mux_25_OUT1)
+     DSP48A1:B1                0.149          Mac/Maddsub_acc_2
+    ----------------------------------------
+    Total                      7.187ns (2.570ns logic, 4.617ns route)
+                                       (35.8% logic, 64.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              3.948ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       Results_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to Results_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.222   1.197  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           16   0.203   1.004  _n0292_inv1 (_n0292_inv)
+     FDE:CE                    0.322          Results_0
+    ----------------------------------------
+    Total                      3.948ns (1.747ns logic, 2.201ns route)
+                                       (44.2% logic, 55.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Controller/state_FSM_FFd2'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.744ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       Mac/SOP_15 (LATCH)
+  Destination Clock: Controller/state_FSM_FFd2 falling
+
+  Data Path: rst to Mac/SOP_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.222   1.092  rst_IBUF (rst_IBUF)
+     LDC:CLR                   0.430          Mac/SOP_13
+    ----------------------------------------
+    Total                      2.744ns (1.652ns logic, 1.092ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              3.668ns (Levels of Logic = 1)
+  Source:            Controller/state_FSM_FFd1 (FF)
+  Destination:       DONE (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Controller/state_FSM_FFd1 to DONE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.650  Controller/state_FSM_FFd1 (Controller/state_FSM_FFd1)
+     OBUF:I->O                 2.571          DONE_OBUF (DONE)
+    ----------------------------------------
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Controller/state_FSM_FFd2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |   11.888|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+Controller/state_FSM_FFd2|         |    1.179|         |         |
+clk                      |    7.187|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.67 secs
+ 
+--> 
+
+Total memory usage is 4506912 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   79 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

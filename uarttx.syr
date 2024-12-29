@@ -1,0 +1,595 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: uarttx.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "uarttx.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "uarttx"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : uarttx
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Windows\System32\DSD_Project_Testing\UART.v" into library work
+Parsing module <uarttx>.
+Parsing module <baud_rate>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <uarttx>.
+
+Elaborating module <baud_rate(BAUD=9600)>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <uarttx>.
+    Related source file is "C:\Windows\System32\DSD_Project_Testing\UART.v".
+        IDLE = 2'b00
+        START = 2'b01
+        DATA = 2'b10
+        STOP = 2'b11
+    Found 1-bit register for signal <done>.
+    Found 32-bit register for signal <counts>.
+    Found 2-bit register for signal <state>.
+    Found 8-bit register for signal <data_reg>.
+    Found 1-bit register for signal <transmitting>.
+    Found 1-bit register for signal <tx>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 4                                              |
+    | Clock              | bclk (rising_edge)                             |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <counts[31]_GND_1_o_add_5_OUT> created at line 348.
+    Found 1-bit 8-to-1 multiplexer for signal <counts[2]_data_reg[7]_Mux_3_o> created at line 342.
+    Found 32-bit comparator greater for signal <n0003> created at line 343
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <uarttx> synthesized.
+
+Synthesizing Unit <baud_rate>.
+    Related source file is "C:\Windows\System32\DSD_Project_Testing\UART.v".
+        BAUD = 9600
+    Found 33-bit register for signal <counter>.
+    Found 1-bit register for signal <bclk>.
+    Found 33-bit adder for signal <counter[32]_GND_2_o_add_1_OUT> created at line 383.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <baud_rate> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 33-bit adder                                          : 1
+# Registers                                            : 7
+ 1-bit register                                        : 4
+ 32-bit register                                       : 1
+ 33-bit register                                       : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 4
+ 1-bit 8-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 33-bit 2-to-1 multiplexer                             : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <baud_rate>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <baud_rate> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 1
+ 33-bit up counter                                     : 1
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 3
+ 1-bit 8-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    u_br/counter_0 in unit <uarttx>
+
+
+Optimizing unit <uarttx> ...
+WARNING:Xst:1293 - FF/Latch <counts_28> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_29> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_30> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_31> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_13> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_14> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_17> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_15> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_16> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_18> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_19> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_22> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_20> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_21> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_23> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_24> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_27> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_25> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_26> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_28> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_29> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_32> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_30> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_br/counter_31> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_3> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_4> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_5> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_6> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_7> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_8> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_9> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_10> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_11> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_12> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_13> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_14> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_15> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_16> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_17> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_18> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_19> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_20> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_21> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_22> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_23> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_24> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_25> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_26> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counts_27> has a constant value of 0 in block <uarttx>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <transmitting> in Unit <uarttx> is equivalent to the following FF/Latch, which will be removed : <state_FSM_FFd1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block uarttx, actual ratio is 0.
+WARNING:Xst:1426 - The value init of the FF/Latch u_br/counter_0_LD hinder the constant cleaning in the block uarttx.
+   You should achieve better results by setting this init to 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 30
+ Flip-Flops                                            : 30
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : uarttx.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 89
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 15
+#      LUT2                        : 3
+#      LUT3                        : 9
+#      LUT4                        : 13
+#      LUT5                        : 1
+#      LUT6                        : 4
+#      MUXCY                       : 23
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 31
+#      FD                          : 2
+#      FDC                         : 12
+#      FDP                         : 1
+#      FDR                         : 3
+#      FDRE                        : 11
+#      FDS                         : 1
+#      LD                          : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 10
+#      OBUF                        : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              31  out of  18224     0%  
+ Number of Slice LUTs:                   47  out of   9112     0%  
+    Number used as Logic:                47  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     56
+   Number with an unused Flip Flop:      25  out of     56    44%  
+   Number with an unused LUT:             9  out of     56    16%  
+   Number of fully used LUT-FF pairs:    22  out of     56    39%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    232     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+u_br/bclk                          | NONE(data_reg_0)       | 15    |
+clk                                | BUFGP                  | 15    |
+rst                                | IBUF+BUFG              | 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.421ns (Maximum Frequency: 292.295MHz)
+   Minimum input arrival time before clock: 3.685ns
+   Maximum output required time after clock: 3.874ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u_br/bclk'
+  Clock period: 2.808ns (frequency: 356.151MHz)
+  Total number of paths / destination ports: 63 / 19
+-------------------------------------------------------------------------
+Delay:               2.808ns (Levels of Logic = 9)
+  Source:            counts_2 (FF)
+  Destination:       counts_0 (FF)
+  Source Clock:      u_br/bclk rising
+  Destination Clock: u_br/bclk rising
+
+  Data Path: counts_2 to counts_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.447   0.879  counts_2 (counts_2)
+     LUT3:I0->O            1   0.205   0.000  Mcompar_n0003_lut<0>1 (Mcompar_n0003_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_n0003_cy<0> (Mcompar_n0003_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0003_cy<1> (Mcompar_n0003_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0003_cy<2> (Mcompar_n0003_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0003_cy<3> (Mcompar_n0003_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0003_cy<4> (Mcompar_n0003_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0003_cy<5> (Mcompar_n0003_cy<5>)
+     MUXCY:CI->O           4   0.019   0.684  Mcompar_n0003_cy<6> (Mcompar_n0003_cy<6>)
+     LUT3:I2->O            1   0.205   0.000  Mmux_state[1]_counts[31]_wide_mux_12_OUT231 (state[1]_counts[31]_wide_mux_12_OUT<2>)
+     FDRE:D                    0.102          counts_2
+    ----------------------------------------
+    Total                      2.808ns (1.245ns logic, 1.563ns route)
+                                       (44.3% logic, 55.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.421ns (frequency: 292.295MHz)
+  Total number of paths / destination ports: 317 / 15
+-------------------------------------------------------------------------
+Delay:               3.421ns (Levels of Logic = 3)
+  Source:            u_br/counter_0_P_0 (FF)
+  Destination:       u_br/counter_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: u_br/counter_0_P_0 to u_br/counter_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.447   0.721  u_br/counter_0_P_0 (u_br/counter_0_P_0)
+     LUT3:I1->O            1   0.203   0.580  u_br/counter_01 (u_br/counter_0)
+     LUT6:I5->O           14   0.205   0.958  u_br/counter[32]_GND_2_o_equal_1_o<32>1 (u_br/counter[32]_GND_2_o_equal_1_o<32>)
+     LUT4:I3->O            1   0.205   0.000  u_br/Mcount_counter_eqn_11 (u_br/Mcount_counter_eqn_1)
+     FDC:D                     0.102          u_br/counter_1
+    ----------------------------------------
+    Total                      3.421ns (1.162ns logic, 2.259ns route)
+                                       (34.0% logic, 66.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u_br/bclk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              3.685ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       state_FSM_FFd2 (FF)
+  Destination Clock: u_br/bclk rising
+
+  Data Path: rst to state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   1.222   1.250  rst_IBUF (rst_IBUF)
+     LUT2:I1->O            1   0.205   0.579  state<0>1 (state<0>_0)
+     FDR:R                     0.430          state_FSM_FFd2
+    ----------------------------------------
+    Total                      3.685ns (1.857ns logic, 1.828ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              3.121ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       u_br/bclk (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to u_br/bclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   1.222   1.594  rst_IBUF (rst_IBUF)
+     LUT5:I0->O            1   0.203   0.000  u_br/bclk_rstpot (u_br/bclk_rstpot)
+     FD:D                      0.102          u_br/bclk
+    ----------------------------------------
+    Total                      3.121ns (1.527ns logic, 1.594ns route)
+                                       (48.9% logic, 51.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u_br/bclk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.874ns (Levels of Logic = 1)
+  Source:            transmitting (FF)
+  Destination:       transmitting (PAD)
+  Source Clock:      u_br/bclk rising
+
+  Data Path: transmitting to transmitting
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             10   0.447   0.856  transmitting (transmitting_OBUF)
+     OBUF:I->O                 2.571          transmitting_OBUF (transmitting)
+    ----------------------------------------
+    Total                      3.874ns (3.018ns logic, 0.856ns route)
+                                       (77.9% logic, 22.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.421|         |         |         |
+rst            |         |    3.598|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u_br/bclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+u_br/bclk      |    2.808|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.12 secs
+ 
+--> 
+
+Total memory usage is 4499040 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   51 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

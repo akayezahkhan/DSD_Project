@@ -1,0 +1,48 @@
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/uarttx.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/uarttx.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim uarttx.ngc uarttx_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tx_ucf.ucf -p xc6slx16-csg324-3 uarttx.ngc uarttx.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o uarttx_map.ncd uarttx.ngd uarttx.pcf 
+par -w -intstyle ise -ol high -mt off uarttx_map.ncd uarttx.ncd uarttx.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml uarttx.twx uarttx.ncd -o uarttx.twr uarttx.pcf -ucf tx_ucf.ucf 
+bitgen -intstyle ise -f uarttx.ut uarttx.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tx_ucf.ucf -p xc6slx16-csg324-3 uarttx.ngc uarttx.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o uarttx_map.ncd uarttx.ngd uarttx.pcf 
+par -w -intstyle ise -ol high -mt off uarttx_map.ncd uarttx.ncd uarttx.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml uarttx.twx uarttx.ncd -o uarttx.twr uarttx.pcf -ucf tx_ucf.ucf 
+bitgen -intstyle ise -f uarttx.ut uarttx.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tx_ucf.ucf -p xc6slx16-csg324-3 uarttx.ngc uarttx.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o uarttx_map.ncd uarttx.ngd uarttx.pcf 
+par -w -intstyle ise -ol high -mt off uarttx_map.ncd uarttx.ncd uarttx.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml uarttx.twx uarttx.ncd -o uarttx.twr uarttx.pcf -ucf tx_ucf.ucf 
+bitgen -intstyle ise -f uarttx.ut uarttx.ncd 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/uarttx.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/uarttx.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim uarttx.ngc uarttx_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tx_ucf.ucf -p xc6slx16-csg324-3 uarttx.ngc uarttx.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o uarttx_map.ncd uarttx.ngd uarttx.pcf 
+par -w -intstyle ise -ol high -mt off uarttx_map.ncd uarttx.ncd uarttx.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml uarttx.twx uarttx.ncd -o uarttx.twr uarttx.pcf -ucf tx_ucf.ucf 
+bitgen -intstyle ise -f uarttx.ut uarttx.ncd 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim uarttx.ngc uarttx_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tx_ucf.ucf -p xc6slx16-csg324-3 uarttx.ngc uarttx.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o uarttx_map.ncd uarttx.ngd uarttx.pcf 
+par -w -intstyle ise -ol high -mt off uarttx_map.ncd uarttx.ncd uarttx.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml uarttx.twx uarttx.ncd -o uarttx.twr uarttx.pcf -ucf tx_ucf.ucf 
+bitgen -intstyle ise -f uarttx.ut uarttx.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tx_ucf.ucf -p xc6slx16-csg324-3 uarttx.ngc uarttx.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o uarttx_map.ncd uarttx.ngd uarttx.pcf 
+par -w -intstyle ise -ol high -mt off uarttx_map.ncd uarttx.ncd uarttx.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml uarttx.twx uarttx.ncd -o uarttx.twr uarttx.pcf -ucf tx_ucf.ucf 
+bitgen -intstyle ise -f uarttx.ut uarttx.ncd 
+xst -intstyle ise -ifn "C:/Windows/System32/DSD_Project_Testing/uarttx.xst" -ofn "C:/Windows/System32/DSD_Project_Testing/uarttx.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim uarttx.ngc uarttx_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 uarttx.ngc uarttx.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o uarttx_map.ncd uarttx.ngd uarttx.pcf 
+par -w -intstyle ise -ol high -mt off uarttx_map.ncd uarttx.ncd uarttx.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml uarttx.twx uarttx.ncd -o uarttx.twr uarttx.pcf 
+bitgen -intstyle ise -f uarttx.ut uarttx.ncd 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim uarttx.ngc uarttx_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 uarttx.ngc uarttx.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o uarttx_map.ncd uarttx.ngd uarttx.pcf 
+par -w -intstyle ise -ol high -mt off uarttx_map.ncd uarttx.ncd uarttx.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml uarttx.twx uarttx.ncd -o uarttx.twr uarttx.pcf 
+bitgen -intstyle ise -f uarttx.ut uarttx.ncd 
